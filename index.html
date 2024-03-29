@@ -303,9 +303,9 @@
     function sendEmail() {
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
-        let message = document.getElementById("message").value;
+        /*let message = document.getElementById("message").value;*/
         let subject = document.getElementById("subject").value;
-        let finalmessage = `Name : ${name} <br>  Email : ${email} <br> Subject : ${subject} <br>  Message : ${message} <br>`;
+        let finalmessage = `Name : ${name} <br>  Email : ${email} <br> Subject : ${subject} <br> `;
         Email.send({
             Host : "smtp-pulse.com",
             Username : "salem.yosri2@gmail.com",
