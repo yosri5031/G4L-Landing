@@ -67,7 +67,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+<<<<<<< HEAD
           <h1 style="font-size:20px;">Afordable and Profitable Growth for Canadian Businesses</h1>
+=======
+          <h1 style="font-size:24px;">Affordable and Profitable Growth for Canadian Businesses</h1>
+>>>>>>> 563422784ed681750183bde5c48935caa9109bfd
           <h2>Unlock your business's growth potential with our affordable and profitable solutions tailored for Canadian small and medium businesses.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#contact" class="btn-get-started scrollto">Contact Us</a>
@@ -216,14 +220,14 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="#" method="post" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
@@ -233,14 +237,14 @@
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea  id="message" placeholder="Enter Message" rows="7"> </textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit" id="submit" onclick="sendEmail()">Send Message</button></div>
             </form>
           </div>
 
@@ -300,7 +304,26 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  <script>  
+    function sendEmail() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        let subject = document.getElementById("subject").value;
+        let finalmessage = `Name : ${name} <br>  Email : ${email} <br> Subject : ${subject} <br>  Message : ${message} <br>`;
+        Email.send({
+            Host : "smtp-pulse.com",
+            Username : "salem.yosri2@gmail.com",
+            Password : "32jS3BoJAaqoe",
+            To : 'salem.yosri2@gmail.com',
+            From : "info@thebouraouigroup.com",
+            Subject : "Grow4less Contact Form",
+            Body : finalmessage
+        }).then(
+          message => alert(message)
+        );
+    }
+    </script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
