@@ -1111,9 +1111,9 @@ section {
 --------------------------------------------------------------*/
 .team .member {
   position: relative;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Defines column sizes */
+  align-items: center; /* Vertically centers content */
   background: #fff;
   transition: 0.5s;
   height: 100%;
