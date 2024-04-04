@@ -566,6 +566,15 @@ section {
   margin-bottom: 0;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
